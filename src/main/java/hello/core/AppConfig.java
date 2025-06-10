@@ -18,8 +18,9 @@ public class AppConfig {
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
-    public FixDiscountPolicy discountPolicy() {
-        return new FixDiscountPolicy();
+    public DiscountPolicy discountPolicy() {
+//        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 
 
