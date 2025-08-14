@@ -24,7 +24,7 @@ public class AutoAppConfig {
 
     @Bean
     OrderService orderService() {
-        return new OrderServiceImpl();
+        return new OrderServiceImpl(memberRepository, discountPolicy);
     }
 
     @Bean(name = "memoryMemberRepository")
