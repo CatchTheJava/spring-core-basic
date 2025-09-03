@@ -9,8 +9,8 @@
     <bean id="memberRepository"
           class="hello.core.member.MemoryMemberRepository" />
     <bean id="orderService" class="hello.core.order.OrderServiceImpl">
-        <constructor-arg name="memberRepository" ref="memberRepository" />
-        <constructor-arg name="discountPolicy" ref="discountPolicy" />
+        <constructor-arg index="0" ref="memberRepository" />
+        <constructor-arg index="1" ref="discountPolicy" />
     </bean>
     <bean id="discountPolicy" class="hello.core.discount.RateDiscountPolicy" />
 </beans>
